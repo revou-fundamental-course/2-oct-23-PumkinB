@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Kalkulator Suhu</title>
+    <script>
+        const inputbutton = document.getElementById ('inputbutton')
+
+
+function con() {
+    var tempcelcius = document.getElementById("input-field").value;
+    var tempfahrenheit = (tempcelcius * (9 / 5)) + 32;
+    var solution = (tempcelcius + "°C * (9/5) + 32 = " + tempfahrenheit + "°F");
+
+    document.getElementById("output-field").value = tempfahrenheit;
+    document.getElementById("output-field2").value = solution;
+}
+
+function res() {
+    var tempcelcius = document.getElementById("input-field").value = 0;
+    var tempfahrenheit = document.getElementById("output-field").value = 0;
+    var solution = document.getElementById("output-field2").value = "-";
+}
+    </script>
+    </head>
+    <body>
+        <header>
+            <h1>Kalkulator Suhu</h1>
+        </header>
+    <main>
+       <form>
+        <label for="input-field">Celcius (°C)</label>
+        <br>
+        <input id="input-field" type="number" placeholder="Celcius">
+        </form>
+    <div id="InputButton">
+        <button type="button" onclick="con()">Conversion</button>
+        <button type="button" onclick="res()">Reset</button>
+       
+    </div>
+    <br>
+    <label for="output-field">Fahrenheit (°F) </label>
+    <br>
+    <input id="output-field" type="text" placeholder="Fahrenheit" readonly>
+    <br>
+    <label for="output-field2">Calculation</label>
+    <br>
+    <input id="output-field2" type="text" placeholder="Calculation" readonly>
+    <br>
+    <a href="">Farenheit to Celcius</a>
+
+    <script src="js/script.js"></script>
+    </main>
+</body>
+</html>
