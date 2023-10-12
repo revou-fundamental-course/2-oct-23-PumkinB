@@ -1,0 +1,17 @@
+const inputbutton = document.getElementById ('inputbutton')
+
+
+function con() {
+    var tempcelcius = document.getElementById("input-field").value;
+    var tempfahrenheit = (tempcelcius * (9 / 5)) + 32;
+    var solution = (tempcelcius + "°C * (9/5) + 32 = " + tempfahrenheit + "°F");
+
+    document.getElementById("output-field").value = tempfahrenheit;
+    document.getElementById("output-field2").value = solution;
+}
+
+function res() {
+    var tempcelcius = document.getElementById("input-field").value = 0;
+    var tempfahrenheit = document.getElementById("output-field").value = 0;
+    var solution = document.getElementById("output-field2").value = "-";
+}
